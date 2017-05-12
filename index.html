@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
+</head>
+<body>
+	 <div id="content"></div>
+	
+	
+</body>
+<script type="text/javascript">
+	 var docEle = document.documentElement,
+        evt = "onorientationchange" in window ? "orientationchange" : "resize",
+        fn = function() {
+            var width = docEle.clientWidth;
+            width && (docEle.style.fontSize = 20 * (width / 320) + "px");
+        };
+     
+    window.addEventListener(evt, fn, false);
+    document.addEventListener("DOMContentLoaded", fn, false);
+</script>
+<script type="text/javascript" src="localhost:9100/webpack-dev-server.js"></script>
+</html>
